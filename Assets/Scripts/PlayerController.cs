@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (grounded && !alreadyJump && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))) {
-            rb.AddForce(new Vector2(0f, onJumpPlatfrom ? jumpForce * 1.5f : jumpForce));
+            rb.AddForce(new Vector2(0f, onJumpPlatfrom ? jumpForce * 1.8f : jumpForce));
             alreadyJump = true;
             Invoke(nameof(RemoveAlreadyJump), 0.5f);
         }

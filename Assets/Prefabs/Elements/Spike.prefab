@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6708618646698698958}
   - component: {fileID: 9191828251437173318}
   - component: {fileID: 7955422637027222662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,18 +96,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 32, y: 32}
+  m_Offset: {x: 32, y: 16}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
-    oldSize: {x: 64, y: 64}
+    oldSize: {x: 64, y: 32}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 64, y: 64}
+  m_Size: {x: 64, y: 32}
   m_EdgeRadius: 0
 --- !u!61 &9191828251437173318
 BoxCollider2D:
@@ -122,18 +122,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 32, y: 32}
+  m_Offset: {x: 32, y: 16}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
-    oldSize: {x: 64, y: 64}
+    oldSize: {x: 64, y: 32}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 80, y: 80}
+  m_Size: {x: 64, y: 40}
   m_EdgeRadius: 0
 --- !u!114 &7955422637027222662
 MonoBehaviour:
