@@ -11,13 +11,18 @@ public class PlayerController : MonoBehaviour {
     public Collider2D backCollider;
     private bool facingRight = true;
     private Rigidbody2D rb;
-    private bool grounded;
+    public bool grounded;
     private bool onJumpPlatfrom;
-    private float move;
+    public float move;
     private bool alreadyJump;
+    public int countOfJumps;
+    private int maxJumpsAvaible = 2;
+    public bool toJerk = false;
+    public bool isJerk = false;
 
     public void Start() {
         rb = GetComponent<Rigidbody2D>();
+        countOfJumps = maxJumpsAvaible;
     }
     
     public void FixedUpdate() {
@@ -28,27 +33,62 @@ public class PlayerController : MonoBehaviour {
         groundCollider.OverlapCollider(new ContactFilter2D(), colliders);
         foreach (Collider2D col in colliders) {
             if (col.gameObject.layer == 8)
+            {
                 grounded = true;
+                if (alreadyJump)
+                {
+                    countOfJumps = maxJumpsAvaible;
+                    alreadyJump = false;
+                }
+            }
             if (col.gameObject.tag.Equals("JumpPlatfrom"))
                 onJumpPlatfrom = true;
             if (col.gameObject.tag.Equals("Platform"))
                 platfrom = col.gameObject;
         }
 
-        if (grounded && !alreadyJump && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))) {
+        if (countOfJumps>0 && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))) {
             rb.AddForce(new Vector2(0f, onJumpPlatfrom ? jumpForce * 1.8f : jumpForce));
-            alreadyJump = true;
-            Invoke(nameof(RemoveAlreadyJump), 0.5f);
+            countOfJumps--;
+            Invoke(nameof(RemoveAlreadyJump), 0.25f);
         }
         
         if (grounded && Input.GetKeyDown(KeyCode.S) && platfrom != null)
             platfrom.GetComponent<PlatformEffector2D>().colliderMask = 2147483647 - (1 << 9);
 
-            move = Input.GetAxis("Horizontal");
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            if (toJerk && !isJerk)
+            {
+                rb.AddForce(new Vector2(-20000, 0));
+                isJerk = true;
+                Invoke(nameof(StopJerk), 0.5f);
+            }
+            toJerk = true;
+            Invoke(nameof(NotJerk), 0.25f);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            if (toJerk && !isJerk)
+            {
+                rb.AddForce(new Vector2(20000, 0));
+                isJerk = true;
+                Invoke(nameof(StopJerk), 0.5f);
+            }
+            toJerk = true;
+            Invoke(nameof(NotJerk), 0.25f);
+        }
+
+        move = Input.GetAxis("Horizontal");
         Collider2D colliderToCheck = facingRight ? (move > 0 ? forwardCollider : backCollider) : (move > 0 ? backCollider: forwardCollider);
-        if (!colliderToCheck.IsTouchingLayers(8))
+
+        if (!colliderToCheck.IsTouchingLayers(8) && Mathf.Abs(move)>0.9f)
             rb.velocity = new Vector2(move * maxSpeed, rb.velocity.y);
 
+        else if (move == 0 && !isJerk)
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
         if (move > 0 && !facingRight)
             Flip();
         else if (move < 0 && facingRight)
@@ -64,6 +104,17 @@ public class PlayerController : MonoBehaviour {
         //transform.position += new Vector3(facingRight ? -playerWidth : playerWidth, 0, 0);
     }
     private void RemoveAlreadyJump() {
-        alreadyJump = false;
+        alreadyJump = true;
+    }
+
+    private void NotJerk()
+    {
+        toJerk = false;
+    }
+
+    private void StopJerk()
+    {
+        rb.velocity = new Vector2(0, rb.velocity.y);
+        isJerk = false;
     }
 }
