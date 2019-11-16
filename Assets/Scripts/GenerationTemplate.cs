@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class GenerationTemplate : MonoBehaviour {
     public float width;
-    public bool isDangerous;
+    public float upPercent;
 }

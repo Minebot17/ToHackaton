@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxVelocityY: 250
   maxSpeed: 125
-  jumpForce: 9000
+  jumpForce: 10000
   groundCollider: {fileID: 898975506869046322}
   forwardCollider: {fileID: 898975507311587550}
   backCollider: {fileID: 898975506128325433}

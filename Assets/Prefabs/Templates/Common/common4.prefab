@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   width: 704
-  isDangerous: 1
+  upPercent: 80
 --- !u!1001 &191688767336893781
 PrefabInstance:
   m_ObjectHideFlags: 0
