@@ -11,7 +11,7 @@ public class CameraFollower : MonoBehaviour {
 	private GameObject target;
 	private Vector2 max;
 	
-	public void Start() {
+	public void Awake() {
 		Singleton = this;
 	}
 
