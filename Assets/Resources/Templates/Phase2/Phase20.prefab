@@ -62,8 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0287762b01a6a0479b1c6785fd392ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 0
-  upPercent: 0
+  width: 704
+  upPercent: 60
 --- !u!1001 &53662559073323693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71,6 +71,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1423167373783029397}
     m_Modifications:
+    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
+        type: 3}
+      propertyPath: m_Name
+      value: Lava (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 5946393646305363408, guid: 0a0c2b5350c838148baad60d58ad03de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -125,11 +130,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
-        type: 3}
-      propertyPath: m_Name
-      value: Lava (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0c2b5350c838148baad60d58ad03de, type: 3}
@@ -296,6 +296,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1423167373783029397}
     m_Modifications:
+    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
+        type: 3}
+      propertyPath: m_Name
+      value: Lava (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 5946393646305363408, guid: 0a0c2b5350c838148baad60d58ad03de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -350,11 +355,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
-        type: 3}
-      propertyPath: m_Name
-      value: Lava (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0c2b5350c838148baad60d58ad03de, type: 3}
@@ -446,6 +446,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1423167373783029397}
     m_Modifications:
+    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
+        type: 3}
+      propertyPath: m_Name
+      value: Lava (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 5946393646305363408, guid: 0a0c2b5350c838148baad60d58ad03de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -500,11 +505,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
-        type: 3}
-      propertyPath: m_Name
-      value: Lava (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0c2b5350c838148baad60d58ad03de, type: 3}
@@ -596,6 +596,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1423167373783029397}
     m_Modifications:
+    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
+        type: 3}
+      propertyPath: m_Name
+      value: Lava (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 5946393646305363408, guid: 0a0c2b5350c838148baad60d58ad03de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -650,11 +655,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
-        type: 3}
-      propertyPath: m_Name
-      value: Lava (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0c2b5350c838148baad60d58ad03de, type: 3}
@@ -746,6 +746,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1423167373783029397}
     m_Modifications:
+    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
+        type: 3}
+      propertyPath: m_Name
+      value: Lava
+      objectReference: {fileID: 0}
     - target: {fileID: 5946393646305363408, guid: 0a0c2b5350c838148baad60d58ad03de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -801,11 +806,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
-        type: 3}
-      propertyPath: m_Name
-      value: Lava
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0c2b5350c838148baad60d58ad03de, type: 3}
 --- !u!4 &6946140742522182865 stripped
@@ -821,6 +821,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1423167373783029397}
     m_Modifications:
+    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
+        type: 3}
+      propertyPath: m_Name
+      value: Lava (7)
+      objectReference: {fileID: 0}
     - target: {fileID: 5946393646305363408, guid: 0a0c2b5350c838148baad60d58ad03de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -875,11 +880,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
-        type: 3}
-      propertyPath: m_Name
-      value: Lava (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0c2b5350c838148baad60d58ad03de, type: 3}
@@ -1046,6 +1046,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1423167373783029397}
     m_Modifications:
+    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
+        type: 3}
+      propertyPath: m_Name
+      value: Lava (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 5946393646305363408, guid: 0a0c2b5350c838148baad60d58ad03de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1101,11 +1106,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
-        type: 3}
-      propertyPath: m_Name
-      value: Lava (4)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0c2b5350c838148baad60d58ad03de, type: 3}
 --- !u!4 &2095904616850962196 stripped
@@ -1121,6 +1121,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1423167373783029397}
     m_Modifications:
+    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
+        type: 3}
+      propertyPath: m_Name
+      value: Lava (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 5946393646305363408, guid: 0a0c2b5350c838148baad60d58ad03de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1176,11 +1181,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
-        type: 3}
-      propertyPath: m_Name
-      value: Lava (6)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0c2b5350c838148baad60d58ad03de, type: 3}
 --- !u!4 &548703535213230103 stripped
@@ -1196,6 +1196,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1423167373783029397}
     m_Modifications:
+    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
+        type: 3}
+      propertyPath: m_Name
+      value: Lava (8)
+      objectReference: {fileID: 0}
     - target: {fileID: 5946393646305363408, guid: 0a0c2b5350c838148baad60d58ad03de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1250,11 +1255,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
-        type: 3}
-      propertyPath: m_Name
-      value: Lava (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0c2b5350c838148baad60d58ad03de, type: 3}

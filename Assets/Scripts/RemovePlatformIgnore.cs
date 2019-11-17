@@ -10,7 +10,7 @@ public class RemovePlatformIgnore : MonoBehaviour {
         List<Collider2D> colliders = new List<Collider2D>();
         GetComponent<Collider2D>().OverlapCollider(new ContactFilter2D(), colliders);
         foreach (Collider2D collider2D in prevColliders) {
-            if (!colliders.Contains(collider2D) && collider2D.gameObject.tag.Equals("Platform"))
+            if (collider2D != null && collider2D.gameObject != null && !colliders.Contains(collider2D) && collider2D.gameObject.tag.Equals("Platform"))
                 collider2D.gameObject.GetComponent<PlatformEffector2D>().colliderMask = 2147483647;
         }
 

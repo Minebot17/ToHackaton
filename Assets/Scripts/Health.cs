@@ -31,8 +31,26 @@ public class Health : MonoBehaviour {
             if (GetComponent<Death>() != null)
                 GetComponent<Death>().OnDeath();
         }
+
+        if (GetComponent<SpriteRenderer>() != null) {
+            GetComponent<SpriteRenderer>().color = Color.red;
+            Invoke(nameof(RemoveColor), 0.5f);
+        }
+        else if (GetComponentInChildren<SpriteRenderer>() != null) {
+            GetComponentInChildren<SpriteRenderer>().color = Color.red;
+            Invoke(nameof(RemoveColorChild), 0.5f);
+        }
+
         UpdateHealthBar(health);
         return health - preDamage;
+    }
+
+    private void RemoveColor() {
+        GetComponent<SpriteRenderer>().color = Color.white;
+    }
+    
+    private void RemoveColorChild() {
+        GetComponentInChildren<SpriteRenderer>().color = Color.white;
     }
 
     private void UpdateHealthBar(int newHealth) {

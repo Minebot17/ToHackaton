@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0287762b01a6a0479b1c6785fd392ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 0
-  upPercent: 0
+  width: 448
+  upPercent: 50
 --- !u!1001 &3721906448086290703
 PrefabInstance:
   m_ObjectHideFlags: 0

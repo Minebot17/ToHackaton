@@ -17,7 +17,7 @@ public class LevelGenerator : MonoBehaviour{
         get => currentPhase;
     }
 
-    private int currentPhase;
+    private int currentPhase = 0;
     public int width = 10240;
     public int height = 1024;
     public int borderCount = 4;
@@ -25,6 +25,9 @@ public class LevelGenerator : MonoBehaviour{
     public int indent = 64;
     public int endIndent = 64;
     public GameObject playerPrefab;
+    public GameObject nearMobPrefab;
+    public GameObject tankMobPrefab;
+    public GameObject rangeMobPrefab;
     public GameObject solidBlockPrefab;
     public GameObject backgroundPrefab;
     public GameObject endLevelPrefab;
@@ -35,6 +38,8 @@ public class LevelGenerator : MonoBehaviour{
     public Sprite jumpPlatform2;
     public Sprite block1;
     public Sprite block2;
+    public Sprite background1;
+    public Sprite background2;
 
     public void Start() {
         Singleton = this;
@@ -54,9 +59,11 @@ public class LevelGenerator : MonoBehaviour{
         GameObject background = Object.Instantiate(backgroundPrefab, level.transform, true);
         background.transform.position = new Vector3(64 * borderCount, 64 * borderCount, 1);
         background.GetComponent<SpriteRenderer>().size = new Vector2(sizeForPlayer + width + endIndent, height);
+        if (phaseNumber != 0)
+            background.GetComponent<SpriteRenderer>().sprite = phaseNumber == 1 ? background1 : background2;
 
         GameObject player = Object.Instantiate(playerPrefab);
-        player.transform.position = new Vector3(64 * borderCount + 16, 64 * borderCount + 32);
+        player.transform.position = new Vector3(64 * borderCount + 16, 64 * borderCount + 32, -1);
         CameraFollower.Singleton.SetTarget(player, new Vector2(128 * borderCount + sizeForPlayer + width, 128 * borderCount + height));
 
         GameObject endLevel = Object.Instantiate(endLevelPrefab, level.transform, true);
@@ -83,8 +90,9 @@ public class LevelGenerator : MonoBehaviour{
                 ChangeSprites(FindNameContains("JumpPlatfrom", spawned), phaseNumber == 1 ? jumpPlatform1 : platform2);
                 ChangeSprites(FindNameContains("SolidBlock", spawned), phaseNumber == 1 ? block1 : block2);
             }
-
-            // TODO spawn mobs from points
+            SpawnMobs(FindNameContains("NearSpawn", spawned), nearMobPrefab, level.transform);
+            SpawnMobs(FindNameContains("TankSpawn", spawned), tankMobPrefab, level.transform);
+            SpawnMobs(FindNameContains("RangeSpawn", spawned), rangeMobPrefab, level.transform);
             downWidth += toSpawn.GetComponent<GenerationTemplate>().width + indent*2;
         }
         
@@ -109,7 +117,6 @@ public class LevelGenerator : MonoBehaviour{
                 ChangeSprites(FindNameContains("JumpPlatfrom", spawned), phaseNumber == 1 ? jumpPlatform1 : jumpPlatform2);
                 ChangeSprites(FindNameContains("SolidBlock", spawned), phaseNumber == 1 ? block1 : block2);
             }
-            // TODO spawn mobs from points
             upWidth += toSpawn.GetComponent<GenerationTemplate>().width + indent*2;
         }
     }
@@ -155,6 +162,13 @@ public class LevelGenerator : MonoBehaviour{
     private void ChangeSprites(List<GameObject> list, Sprite sprite) {
         foreach (GameObject o in list) {
             o.GetComponent<SpriteRenderer>().sprite = sprite;
+        }
+    }
+    
+    private void SpawnMobs(List<GameObject> list, GameObject prefab, Transform parent) {
+        foreach (GameObject o in list) {
+            GameObject mob = Object.Instantiate(prefab, parent, true);
+            mob.transform.position = new Vector3(o.transform.position.x, o.transform.position.y, -1);
         }
     }
 }

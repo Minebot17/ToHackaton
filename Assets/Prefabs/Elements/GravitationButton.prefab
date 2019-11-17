@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4729760056033647892}
   - component: {fileID: 2836346624647269808}
   - component: {fileID: 7448460594582208944}
+  - component: {fileID: 533176283404310781}
   m_Layer: 0
   m_Name: GravitationButton
   m_TagString: Untagged
@@ -107,3 +108,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &533176283404310781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401484224326008814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690861d2559a2324691a0ba4da752208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

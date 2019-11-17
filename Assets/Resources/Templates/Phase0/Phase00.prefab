@@ -56,8 +56,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0287762b01a6a0479b1c6785fd392ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 0
-  upPercent: 0
+  width: 768
+  upPercent: 40
 --- !u!1001 &1498050745883318739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -615,6 +615,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7214708661412393636}
     m_Modifications:
+    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
+        type: 3}
+      propertyPath: m_Name
+      value: Lava (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 5946393646305363408, guid: 0a0c2b5350c838148baad60d58ad03de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -669,11 +674,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
-        type: 3}
-      propertyPath: m_Name
-      value: Lava (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0c2b5350c838148baad60d58ad03de, type: 3}
@@ -990,6 +990,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7214708661412393636}
     m_Modifications:
+    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
+        type: 3}
+      propertyPath: m_Name
+      value: Lava (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 5946393646305363408, guid: 0a0c2b5350c838148baad60d58ad03de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1045,11 +1050,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
-        type: 3}
-      propertyPath: m_Name
-      value: Lava (2)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0c2b5350c838148baad60d58ad03de, type: 3}
 --- !u!4 &2802343799375453272 stripped
@@ -1065,6 +1065,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7214708661412393636}
     m_Modifications:
+    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
+        type: 3}
+      propertyPath: m_Name
+      value: Lava
+      objectReference: {fileID: 0}
     - target: {fileID: 5946393646305363408, guid: 0a0c2b5350c838148baad60d58ad03de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1119,11 +1124,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735639633304998296, guid: 0a0c2b5350c838148baad60d58ad03de,
-        type: 3}
-      propertyPath: m_Name
-      value: Lava
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0c2b5350c838148baad60d58ad03de, type: 3}

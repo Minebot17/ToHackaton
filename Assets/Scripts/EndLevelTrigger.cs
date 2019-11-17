@@ -10,6 +10,9 @@ public class EndLevelTrigger : MonoBehaviour {
         GetComponent<Collider2D>().OverlapCollider(new ContactFilter2D(), colliders);
         foreach (Collider2D collider2D in prevColliders) {
             if (collider2D.gameObject.layer == 9) {
+                if (Gravitation.gravityUp)
+                    Gravitation.changeGravity();
+                Gravitation.mobs.Clear();
                 Destroy(collider2D.gameObject);
                 Destroy(gameObject);
                 LevelGenerator.Singleton.CurrentPhase--;

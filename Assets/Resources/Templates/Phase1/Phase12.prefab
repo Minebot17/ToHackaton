@@ -67,8 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0287762b01a6a0479b1c6785fd392ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 0
-  upPercent: 0
+  width: 768
+  upPercent: 40
 --- !u!1001 &1900457001453228986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -860,6 +860,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448460594582208944, guid: 9c324daa683111b4fa937f3be1389e60,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448460594582208944, guid: 9c324daa683111b4fa937f3be1389e60,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448460594582208944, guid: 9c324daa683111b4fa937f3be1389e60,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448460594582208944, guid: 9c324daa683111b4fa937f3be1389e60,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c324daa683111b4fa937f3be1389e60, type: 3}

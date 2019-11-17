@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GravitationButton : MonoBehaviour {
     public void FixedUpdate() {
-        if (Input.GetKeyDown(KeyCode.Q) && GetComponent<BoxCollider2D>().IsTouchingLayers(9)) {
+        if (Input.GetKeyDown(KeyCode.Q) && PlayerController.IsTouchingLayers(GetComponent<BoxCollider2D>(), 9)) {
             Gravitation.changeGravity();
         }
     }
