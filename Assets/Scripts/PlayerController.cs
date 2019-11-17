@@ -37,10 +37,8 @@ public class PlayerController : MonoBehaviour {
         foreach (Collider2D col in colliders) {
             if (col.gameObject.layer == 8) {
                 grounded = true;
-                if (alreadyJump) {
+                if (!alreadyJump)
                     countOfJumps = maxJumpsAvaible;
-                    alreadyJump = false;
-                }
             }
 
             if (col.gameObject.tag.Equals("JumpPlatfrom"))
@@ -49,9 +47,10 @@ public class PlayerController : MonoBehaviour {
                 platfrom = col.gameObject;
         }
 
-        if (countOfJumps > 0 && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))) {
-            rb.AddForce(new Vector2(0f, onJumpPlatfrom ? jumpForce * 1.8f : jumpForce));
+        if (((countOfJumps == maxJumpsAvaible && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space))) || (countOfJumps > 0 && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))) && !alreadyJump) {
+            rb.AddForce(new Vector2(0f, (onJumpPlatfrom ? jumpForce * 1.5f : jumpForce) * (Gravitation.gravityUp ? -1 : 1)));
             countOfJumps--;
+            alreadyJump = true;
             Invoke(nameof(RemoveAlreadyJump), 0.1f);
         }
 
@@ -112,7 +111,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void RemoveAlreadyJump() {
-        alreadyJump = true;
+        alreadyJump = false;
     }
 
     private void NotJerk() {

@@ -104,7 +104,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 30
+  m_GravityScale: 100
   m_Material: {fileID: 6200000, guid: b322f31d21505c647aac26efcca9a17a, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
@@ -138,12 +138,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ef9e7e7afe09c468532fb083ef87f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocityY: 250
-  maxSpeed: 125
-  jumpForce: 10000
+  maxVelocityY: 500
+  maxSpeed: 200
+  jumpForce: 17000
   groundCollider: {fileID: 898975506869046322}
   forwardCollider: {fileID: 898975507311587550}
   backCollider: {fileID: 898975506128325433}
+  grounded: 0
+  move: 0
+  countOfJumps: 0
+  toJerk: 0
+  isJerk: 0
 --- !u!114 &5965377747076102364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,8 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdc10b3fb3675b14e91c0aa0c2bcd953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
+  health: 10
+  maxHealth: 10
 --- !u!114 &6041077614033111905
 MonoBehaviour:
   m_ObjectHideFlags: 0
